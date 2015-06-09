@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Mn7-8R-ZuL">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ryK-XZ-Jt2">
+            <objects>
+                <navigationController id="Mn7-8R-ZuL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aqT-su-bz4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="R6v-O9-vMB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tVA-ml-tgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1024" y="105"/>
+        </scene>
+        <!--Quartz 2D-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5se-rD-4wt">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQj-j9-KdW">
+                                        <rect key="frame" x="0.0" y="10" width="600" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="4EQ-yU-fKY"/>
+                                        </constraints>
+                                        <state key="normal" title="重写UIView的drawRect方法">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="N3w-k2-lDd" kind="push" id="lKY-ZU-LCL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7b-oF-7z0">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                        <state key="normal" title="绘制距形">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="fZ5-s5-HMw" kind="push" id="qoa-3c-2X5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ITc-yw-Q5G">
+                                        <rect key="frame" x="0.0" y="118" width="600" height="44"/>
+                                        <state key="normal" title="画椭圆">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="dyV-mu-Y0i" kind="push" id="ChK-uD-KvP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgj-81-xvV">
+                                        <rect key="frame" x="0.0" y="172" width="600" height="44"/>
+                                        <state key="normal" title="画弧">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="4DA-ph-sf3" kind="push" id="nyn-Pc-Roe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sev-MT-e7H">
+                                        <rect key="frame" x="0.0" y="226" width="600" height="44"/>
+                                        <state key="normal" title="绘制贝塞尔曲线">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="rLS-nG-dTE" kind="push" id="gQ6-qs-34f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqd-zX-Awc">
+                                        <rect key="frame" x="0.0" y="280" width="600" height="44"/>
+                                        <state key="normal" title="绘制文本">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="K4t-af-pDy" kind="push" id="CsB-y2-Uzm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAw-8r-RCs">
+                                        <rect key="frame" x="0.0" y="334" width="600" height="44"/>
+                                        <state key="normal" title="直线渐变">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ypB-Ps-B7g" kind="push" id="wMT-11-SH3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yb-eJ-Ald">
+                                        <rect key="frame" x="0.0" y="388" width="600" height="44"/>
+                                        <state key="normal" title="径向渐变">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="85A-fF-F4d" kind="push" id="RkE-UM-nJ8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sev-MT-e7H" firstAttribute="top" secondItem="Wgj-81-xvV" secondAttribute="bottom" constant="10" id="0B9-5B-8vX"/>
+                                    <constraint firstItem="IAw-8r-RCs" firstAttribute="height" secondItem="4yb-eJ-Ald" secondAttribute="height" id="2te-72-Yoz"/>
+                                    <constraint firstItem="n7b-oF-7z0" firstAttribute="top" secondItem="wQj-j9-KdW" secondAttribute="bottom" constant="10" id="53s-e1-JYY"/>
+                                    <constraint firstItem="wQj-j9-KdW" firstAttribute="top" secondItem="5se-rD-4wt" secondAttribute="top" constant="10" id="5Wx-0f-af0"/>
+                                    <constraint firstItem="tqd-zX-Awc" firstAttribute="width" secondItem="IAw-8r-RCs" secondAttribute="width" id="6fe-N7-iAx"/>
+                                    <constraint firstItem="sev-MT-e7H" firstAttribute="leading" secondItem="Wgj-81-xvV" secondAttribute="leading" id="A9z-zc-OLY"/>
+                                    <constraint firstItem="ITc-yw-Q5G" firstAttribute="top" secondItem="n7b-oF-7z0" secondAttribute="bottom" constant="10" id="B7m-x3-mcU"/>
+                                    <constraint firstItem="wQj-j9-KdW" firstAttribute="height" secondItem="n7b-oF-7z0" secondAttribute="height" id="Bf6-Vu-JO9"/>
+                                    <constraint firstItem="ITc-yw-Q5G" firstAttribute="height" secondItem="Wgj-81-xvV" secondAttribute="height" id="DhM-hu-e7g"/>
+                                    <constraint firstItem="wQj-j9-KdW" firstAttribute="leading" secondItem="n7b-oF-7z0" secondAttribute="leading" id="GX8-rD-lXm"/>
+                                    <constraint firstItem="4yb-eJ-Ald" firstAttribute="top" secondItem="IAw-8r-RCs" secondAttribute="bottom" constant="10" id="K83-UQ-t6N"/>
+                                    <constraint firstItem="wQj-j9-KdW" firstAttribute="width" secondItem="n7b-oF-7z0" secondAttribute="width" id="M3f-cd-2IX"/>
+                                    <constraint firstItem="tqd-zX-Awc" firstAttribute="leading" secondItem="sev-MT-e7H" secondAttribute="leading" id="POL-u7-ENl"/>
+                                    <constraint firstItem="tqd-zX-Awc" firstAttribute="top" secondItem="sev-MT-e7H" secondAttribute="bottom" constant="10" id="Qve-7s-ZsH"/>
+                                    <constraint firstItem="tqd-zX-Awc" firstAttribute="width" secondItem="sev-MT-e7H" secondAttribute="width" id="RSE-v8-cVb"/>
+                                    <constraint firstItem="IAw-8r-RCs" firstAttribute="top" secondItem="tqd-zX-Awc" secondAttribute="bottom" constant="10" id="UGk-3K-q7N"/>
+                                    <constraint firstItem="tqd-zX-Awc" firstAttribute="leading" secondItem="IAw-8r-RCs" secondAttribute="leading" id="W9g-ty-76r"/>
+                                    <constraint firstItem="ITc-yw-Q5G" firstAttribute="leading" secondItem="n7b-oF-7z0" secondAttribute="leading" id="aRe-E9-ajt"/>
+                                    <constraint firstAttribute="trailing" secondItem="wQj-j9-KdW" secondAttribute="trailing" id="cRF-jS-ukg"/>
+                                    <constraint firstItem="ITc-yw-Q5G" firstAttribute="width" secondItem="n7b-oF-7z0" secondAttribute="width" id="dh2-KD-XRL"/>
+                                    <constraint firstItem="ITc-yw-Q5G" firstAttribute="height" secondItem="n7b-oF-7z0" secondAttribute="height" id="dj9-n2-KRm"/>
+                                    <constraint firstItem="sev-MT-e7H" firstAttribute="width" secondItem="Wgj-81-xvV" secondAttribute="width" id="eY8-Dq-IGB"/>
+                                    <constraint firstItem="ITc-yw-Q5G" firstAttribute="leading" secondItem="Wgj-81-xvV" secondAttribute="leading" id="i1O-Yz-9n4"/>
+                                    <constraint firstItem="IAw-8r-RCs" firstAttribute="leading" secondItem="4yb-eJ-Ald" secondAttribute="leading" id="io6-Ce-6W2"/>
+                                    <constraint firstItem="Wgj-81-xvV" firstAttribute="top" secondItem="ITc-yw-Q5G" secondAttribute="bottom" constant="10" id="jxI-gp-ros"/>
+                                    <constraint firstItem="IAw-8r-RCs" firstAttribute="width" secondItem="4yb-eJ-Ald" secondAttribute="width" id="koh-G9-71i"/>
+                                    <constraint firstItem="ITc-yw-Q5G" firstAttribute="width" secondItem="Wgj-81-xvV" secondAttribute="width" id="rg4-oZ-IKq"/>
+                                    <constraint firstAttribute="bottom" secondItem="4yb-eJ-Ald" secondAttribute="bottom" constant="30" id="vRW-pK-5Kt"/>
+                                    <constraint firstItem="tqd-zX-Awc" firstAttribute="height" secondItem="IAw-8r-RCs" secondAttribute="height" id="wgj-40-5aN"/>
+                                    <constraint firstItem="wQj-j9-KdW" firstAttribute="leading" secondItem="5se-rD-4wt" secondAttribute="leading" id="x0r-vs-2zE"/>
+                                    <constraint firstItem="tqd-zX-Awc" firstAttribute="height" secondItem="sev-MT-e7H" secondAttribute="height" id="xCW-6t-gUV"/>
+                                    <constraint firstItem="sev-MT-e7H" firstAttribute="height" secondItem="Wgj-81-xvV" secondAttribute="height" id="zhh-gp-1Ci"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5se-rD-4wt" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="3by-3n-aus"/>
+                            <constraint firstAttribute="trailing" secondItem="5se-rD-4wt" secondAttribute="trailing" id="EEi-P2-EpW"/>
+                            <constraint firstAttribute="bottom" secondItem="5se-rD-4wt" secondAttribute="bottom" id="EkC-O3-Taw"/>
+                            <constraint firstItem="5se-rD-4wt" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="dlp-RH-gdM"/>
+                            <constraint firstItem="wQj-j9-KdW" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="rtn-V9-CpQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quartz 2D" id="7MG-Sw-8Yb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-109" y="105"/>
+        </scene>
+        <!--画椭圆-->
+        <scene sceneID="8eo-0h-Wxk">
+            <objects>
+                <viewController id="dyV-mu-Y0i" customClass="EllipseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MrX-tf-cwA"/>
+                        <viewControllerLayoutGuide type="bottom" id="zYV-3i-i8V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ynq-5T-HVC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6E-Eg-T8a" customClass="DrawEllipseView">
+                                <rect key="frame" x="30" y="74" width="540" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="i6E-Eg-T8a" secondAttribute="height" multiplier="1:1" id="Hoc-CU-tVs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="i6E-Eg-T8a" secondAttribute="trailing" constant="30" id="ACk-2o-yIA"/>
+                            <constraint firstItem="i6E-Eg-T8a" firstAttribute="top" secondItem="Ynq-5T-HVC" secondAttribute="top" constant="74" id="RBZ-eE-DVF"/>
+                            <constraint firstItem="i6E-Eg-T8a" firstAttribute="leading" secondItem="Ynq-5T-HVC" secondAttribute="leading" constant="30" id="gDH-Tm-hwf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="画椭圆" id="fg2-yD-gCL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A7Z-4R-Rpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="957"/>
+        </scene>
+        <!--画弧-->
+        <scene sceneID="gJ2-m1-RPh">
+            <objects>
+                <viewController id="4DA-ph-sf3" customClass="ArcViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZC6-eE-PNF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kxi-Px-WF3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Yc-Ju-vQ9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Itn-sz-AC9" customClass="DrawArcView">
+                                <rect key="frame" x="30" y="84" width="540" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Itn-sz-AC9" secondAttribute="height" multiplier="1:1" id="W9U-Og-UAz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Itn-sz-AC9" firstAttribute="top" secondItem="9Yc-Ju-vQ9" secondAttribute="top" constant="84" id="6k3-HZ-vpl"/>
+                            <constraint firstAttribute="trailing" secondItem="Itn-sz-AC9" secondAttribute="trailing" constant="30" id="CrZ-nf-m3P"/>
+                            <constraint firstItem="Itn-sz-AC9" firstAttribute="leading" secondItem="9Yc-Ju-vQ9" secondAttribute="leading" constant="30" id="eNn-7Y-zS2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="画弧" id="qJ2-Q0-asd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dGh-Oa-ucv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="1690"/>
+        </scene>
+        <!--直线渐变-->
+        <scene sceneID="4q6-gS-tBE">
+            <objects>
+                <viewController id="ypB-Ps-B7g" customClass="LinearGradientViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tnc-im-m5a"/>
+                        <viewControllerLayoutGuide type="bottom" id="BI8-oO-hpD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f4L-Qk-6Bc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCw-zC-oPW" customClass="DrawLinearGradientView">
+                                <rect key="frame" x="30" y="84" width="540" height="270"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UCw-zC-oPW" secondAttribute="height" multiplier="2:1" id="G5B-dM-7zm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UCw-zC-oPW" firstAttribute="leading" secondItem="f4L-Qk-6Bc" secondAttribute="leading" constant="30" id="EEK-eL-jVf"/>
+                            <constraint firstAttribute="trailing" secondItem="UCw-zC-oPW" secondAttribute="trailing" constant="30" id="ndf-Gh-fa8"/>
+                            <constraint firstItem="UCw-zC-oPW" firstAttribute="top" secondItem="f4L-Qk-6Bc" secondAttribute="top" constant="84" id="q7O-po-euR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="直线渐变" id="khf-nv-5PD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vor-1O-EFP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="2455"/>
+        </scene>
+        <!--径向渐变-->
+        <scene sceneID="aQK-T4-SwN">
+            <objects>
+                <viewController id="85A-fF-F4d" customClass="RadialGradientViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d2D-To-j9f"/>
+                        <viewControllerLayoutGuide type="bottom" id="cNE-Uh-FkM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zdi-vq-uY6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ips-PE-ZAm" customClass="DrawRadialGradientView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ips-PE-ZAm" secondAttribute="height" multiplier="2:1" id="L0S-dE-yty"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ips-PE-ZAm" firstAttribute="top" secondItem="Zdi-vq-uY6" secondAttribute="top" constant="64" id="hEV-NR-Rpe"/>
+                            <constraint firstAttribute="trailing" secondItem="Ips-PE-ZAm" secondAttribute="trailing" id="muQ-Xg-xxo"/>
+                            <constraint firstItem="Ips-PE-ZAm" firstAttribute="leading" secondItem="Zdi-vq-uY6" secondAttribute="leading" id="yvF-Ga-YTH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="径向渐变" id="g9W-3Y-U5W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXi-FC-JVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="3261"/>
+        </scene>
+        <!--绘制文字-->
+        <scene sceneID="Q2x-Lf-faL">
+            <objects>
+                <viewController id="K4t-af-pDy" customClass="TextViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P2f-eu-G4W"/>
+                        <viewControllerLayoutGuide type="bottom" id="ghs-X1-lLy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VZv-3c-ueF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2b-aN-Sml" customClass="DrawTextView">
+                                <rect key="frame" x="15" y="64" width="570" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="R2b-aN-Sml" secondAttribute="bottom" id="Ae4-CW-sGF"/>
+                            <constraint firstItem="R2b-aN-Sml" firstAttribute="top" secondItem="VZv-3c-ueF" secondAttribute="top" constant="64" id="Dzc-8s-tZF"/>
+                            <constraint firstItem="R2b-aN-Sml" firstAttribute="leading" secondItem="VZv-3c-ueF" secondAttribute="leading" constant="15" id="nZY-bm-CPw"/>
+                            <constraint firstAttribute="trailing" secondItem="R2b-aN-Sml" secondAttribute="trailing" constant="15" id="nbK-uN-TsC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="绘制文字" id="Wlc-OM-0xo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAn-Ub-hI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="-2331"/>
+        </scene>
+        <!--绘制贝塞尔曲线-->
+        <scene sceneID="KEX-zb-aWg">
+            <objects>
+                <viewController id="rLS-nG-dTE" customClass="BezierCurveViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9W7-7I-4gq"/>
+                        <viewControllerLayoutGuide type="bottom" id="3dw-DN-nEv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n7U-w6-7Tj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bOT-sw-ywj" customClass="DrawBezierCurveView">
+                                <rect key="frame" x="30" y="84" width="540" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bOT-sw-ywj" secondAttribute="height" multiplier="1:1" id="53w-Yc-5z5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bOT-sw-ywj" firstAttribute="leading" secondItem="n7U-w6-7Tj" secondAttribute="leading" constant="30" id="CSD-MT-Usg"/>
+                            <constraint firstAttribute="trailing" secondItem="bOT-sw-ywj" secondAttribute="trailing" constant="30" id="Lo4-8Z-Yjg"/>
+                            <constraint firstItem="bOT-sw-ywj" firstAttribute="top" secondItem="n7U-w6-7Tj" secondAttribute="top" constant="84" id="esg-fC-7J9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="绘制贝塞尔曲线" id="f1u-BM-edH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQa-Dr-pMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="-1557"/>
+        </scene>
+        <!--绘制距形-->
+        <scene sceneID="dvw-iE-DZn">
+            <objects>
+                <viewController id="fZ5-s5-HMw" customClass="DrawRectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mAZ-bi-7de"/>
+                        <viewControllerLayoutGuide type="bottom" id="81k-vs-McD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uFb-Pj-lf0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBE-5B-paL" customClass="DrawRectView">
+                                <rect key="frame" x="30" y="74" width="540" height="270"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bBE-5B-paL" secondAttribute="height" multiplier="2:1" id="xAW-Em-R5R"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bBE-5B-paL" secondAttribute="trailing" constant="30" id="Mh4-w4-5Oc"/>
+                            <constraint firstItem="bBE-5B-paL" firstAttribute="leading" secondItem="uFb-Pj-lf0" secondAttribute="leading" constant="30" id="Ne5-I3-Asn"/>
+                            <constraint firstItem="bBE-5B-paL" firstAttribute="top" secondItem="uFb-Pj-lf0" secondAttribute="top" constant="74" id="b1w-F3-l8Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="绘制距形" id="50v-1l-Ndi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZ8-kR-iuw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="-737"/>
+        </scene>
+        <!--重写UIView的drawRect-->
+        <scene sceneID="cdV-To-fSk">
+            <objects>
+                <viewController id="N3w-k2-lDd" customClass="ArrideDrawRectViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cJB-Xg-p2K"/>
+                        <viewControllerLayoutGuide type="bottom" id="Twh-m6-xyu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UNd-De-0Mm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ap-zb-pIO" customClass="ArrideDrawRectView">
+                                <rect key="frame" x="30" y="74" width="540" height="270"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5ap-zb-pIO" secondAttribute="height" multiplier="2:1" id="aUz-xz-Men"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5ap-zb-pIO" secondAttribute="trailing" constant="30" id="OsD-Z8-fIQ"/>
+                            <constraint firstItem="5ap-zb-pIO" firstAttribute="leading" secondItem="UNd-De-0Mm" secondAttribute="leading" constant="30" id="TCd-46-57c"/>
+                            <constraint firstItem="5ap-zb-pIO" firstAttribute="top" secondItem="UNd-De-0Mm" secondAttribute="top" constant="74" id="jnr-nr-XNL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="重写UIView的drawRect" id="tw1-iS-DNV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iak-6I-8OK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693" y="105"/>
+        </scene>
+    </scenes>
+</document>
